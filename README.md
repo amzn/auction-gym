@@ -1,4 +1,4 @@
-## My Project
+## AuctionGym
 
 TODO: Fill this README out!
 
