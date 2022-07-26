@@ -1,4 +1,4 @@
-## AuctionGym
+## AuctionGym: Simulating Online Advertising Auctions
 
 This repository contains the source code for AuctionGym: a simulation environment that enables reproducible offline evaluation of bandit and reinforcement learning approaches to ad allocation and bidding in online advertising auctions.
 A [research paper](https://www.amazon.science/publications/learning-to-bid-with-auctiongym) accompanying this repository was accepted as a contribution to the [AdKDD '22 workshop](https://www.adkdd.org/), co-located with the [2022 ACM SIGKDD Conference](https://kdd.org/kdd2022/index.html).
