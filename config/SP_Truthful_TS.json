@@ -1,0 +1,26 @@
+{
+  "random_seed": 0,
+  "num_runs": 3,
+  "num_iter" : 20,
+  "rounds_per_iter": 10000,
+  "num_participants_per_round": 2,
+  "embedding_size": 5,
+  "embedding_var": 1.0,
+  "obs_embedding_size": 4,
+  "allocation": "SecondPrice",
+  "agents": [ {
+    "name": "Truthful Learnt",
+    "num_copies": 6,
+    "num_items": 12,
+      "allocator": {
+        "type": "PyTorchLogisticRegressionAllocator",
+        "kwargs": {"embedding_size": 4, "num_items": 12}
+      },
+      "bidder": {
+        "type": "TruthfulBidder",
+        "kwargs": {}
+      }
+    }
+  ],
+  "output_dir": "results/SP_Truthful_TS/"
+}

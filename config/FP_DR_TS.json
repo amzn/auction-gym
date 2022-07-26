@@ -1,0 +1,28 @@
+{
+  "random_seed": 0,
+  "num_runs": 2,
+  "num_iter" : 3,
+  "rounds_per_iter": 10000,
+  "num_participants_per_round": 2,
+  "embedding_size": 5,
+  "embedding_var": 1.0,
+  "obs_embedding_size": 4,
+  "allocation": "FirstPrice",
+  "agents": [ {
+    "name": "DR",
+    "num_copies": 3,
+    "num_items": 12,
+      "allocator": {
+        "type": "PyTorchLogisticRegressionAllocator",
+        "kwargs": {"embedding_size": 4, "num_items": 12}
+      },
+      "bidder": {
+          "type": "DoublyRobustBidder",
+          "kwargs": {
+            "gamma_sigma":  0.02,
+            "init_gamma": 1.0
+          }
+    }
+  }],
+  "output_dir": "results/FP_DR_TS/"
+}
