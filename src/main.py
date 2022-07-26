@@ -203,8 +203,7 @@ if __name__ == '__main__':
 
         auction_revenue = []
 
-        # TODO -- fix parameters etc, keeping everything global is not a good idea
-        # Run simulation
+        # Run simulation (with global parameters -- fine for the purposes of this script)
         simulation_run()
 
         # Store
