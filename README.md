@@ -32,7 +32,8 @@ python src/main.py config/SP_Oracle.json
 ```
 
 A `results`-directory will be created, with a subdirectory per configuration file that was ran. This subdirectory will contain .csv-files with raw metrics, and .pdf-files with general visualisations.
-See [CONFIG](CONFIG.md) for more detail on the structure of the configuration files.
+Other configuration files will generate results for other environments, and other bidder behaviour.
+See [configuration](CONFIG.md) for more detail on the structure of the configuration files.
 
 
 
