@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use AuctionGym, please consider citing our paper"
+authors:
+- family-names: "Jeunen"
+  given-names: "Olivier"
+  orcid: "https://orcid.org/0000-0001-6256-5814"
+- family-names: "Murphy"
+  given-names: "Sean"
+- family-names: "Allison"
+  given-names: "Ben"
+title: "Learning to Bid with AuctionGym"
+url: "https://github.com/amzn/auction-gym"
+preferred-citation:
+  type: conference-paper
+  authors:
+  - family-names: "Jeunen"
+    given-names: "Olivier"
+    orcid: "https://orcid.org/0000-0001-6256-5814"
+  - family-names: "Murphy"
+    given-names: "Sean"
+  - family-names: "Allison"
+    given-names: "Ben"
+  collection-title: "Proceedings of the AdKDD Workshop at the 28th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining"
+  title: "Learning to Bid with AuctionGym"
+  year: 2022
