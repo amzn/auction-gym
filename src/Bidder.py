@@ -9,7 +9,7 @@ from sklearn.metrics import roc_auc_score
 from tqdm import tqdm
 
 from Impression import ImpressionOpportunity
-from Models import BidShadingContextualBandit, BidShadingPolicy, PyTorchWinRateEstimator
+from Models import BidShadingContextualBandit, BidShadingPolicy, BetterPyTorchWinRateEstimator
 
 
 class Bidder:
@@ -163,7 +163,7 @@ class ValueLearningBidder(Bidder):
         self.inference = inference
         self.gammas = []
         self.propensities = []
-        self.winrate_model = PyTorchWinRateEstimator()
+        self.winrate_model = BetterPyTorchWinRateEstimator()
         self.bidding_policy = BidShadingPolicy() if inference == 'policy' else None
         self.model_initialised = False
         super(ValueLearningBidder, self).__init__(rng)
@@ -447,7 +447,7 @@ class DoublyRobustBidder(Bidder):
         self.prev_gamma = init_gamma
         self.gammas = []
         self.propensities = []
-        self.winrate_model = PyTorchWinRateEstimator()
+        self.winrate_model = BetterPyTorchWinRateEstimator()
         self.bidding_policy = BidShadingContextualBandit(loss='Doubly Robust', winrate_model=self.winrate_model)
         self.model_initialised = False
         super(DoublyRobustBidder, self).__init__(rng)
