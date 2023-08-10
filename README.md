@@ -1,7 +1,9 @@
 ## AuctionGym: Simulating Online Advertising Auctions
 
 This repository contains the source code for AuctionGym: a simulation environment that enables reproducible offline evaluation of bandit and reinforcement learning approaches to ad allocation and bidding in online advertising auctions.
-A [research paper](https://www.amazon.science/publications/learning-to-bid-with-auctiongym) accompanying this repository was accepted as a contribution to the [AdKDD '22 workshop](https://www.adkdd.org/), co-located with the [2022 ACM SIGKDD Conference](https://kdd.org/kdd2022/index.html), and received a Best Paper Award.
+https://dl.acm.org/doi/10.1145/3580305.3599877
+AuctionGym was released in the context of our ["Off-Policy Learning to Bid with AuctionGym"](https://dl.acm.org/doi/10.1145/3580305.3599877) publication in the Applied Data Science Track of the [2023 ACM SIGKDD Conference](https://kdd.org/kdd2022/index.html).
+An [earlier version of our work](https://www.amazon.science/publications/learning-to-bid-with-auctiongym) was presented at the [AdKDD '22 workshop](https://www.adkdd.org/), where it received a Best Paper Award.
 
 Offline evaluation of "learning to bid" approaches is not straightforward, because of multiple reasons:
 (1) observational data suffers from unobserved confounding and experimental data with broad interventions is costly to obtain,
@@ -22,7 +24,7 @@ Analogosuly, " *Getting Started with AuctionGym (2. Effects of Bid Shading)* " s
 
 ## Reproducing Research Results
 
-This section provides instructions to reproduce the results reported in our AdKDD paper.
+This section provides instructions to reproduce the results reported in our paper.
 
 We provide a script that takes as input a configuration file detailing the environment and bidders (in JSON format), and outputs raw logged metrics over repeated auction rounds in .csv-files, along with visualisations.
 To reproduce the results for truthful bidders in a second-price auction reported in Fig. 1 in the paper, run:
@@ -40,16 +42,25 @@ See [configuration](CONFIG.md) for more detail on the structure of the configura
 ## Citing
 
 
-Please cite the [accompanying research paper](https://www.amazon.science/publications/learning-to-bid-with-auctiongym) if you use AuctionGym in your work:
+Please cite the [accompanying research paper](https://dl.acm.org/doi/10.1145/3580305.3599877) if you use AuctionGym in your work:
 
 ```BibTeX
-    @inproceedings{Jeunen2022_AuctionGym,
-      author = {Jeunen, Olivier and Murphy, Sean and Allison, Ben},
-      title = {Learning to Bid with AuctionGym},
-      booktitle = {Proc. of the AdKDD Workshop at the 28th ACM SIGKDD Conference on Knowledge Discovery \& Data Mining},
-      series = {AdKDD '22},
-      year = {2022}
-    }
+	@inproceedings{10.1145/3580305.3599877,
+		author = {Jeunen, Olivier and Murphy, Sean and Allison, Ben},
+		title = {Off-Policy Learning-to-Bid with AuctionGym},
+		year = {2023},
+		isbn = {9798400701030},
+		publisher = {Association for Computing Machinery},
+		address = {New York, NY, USA},
+		url = {https://doi.org/10.1145/3580305.3599877},
+		doi = {10.1145/3580305.3599877},
+		booktitle = {Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+		pages = {4219–4228},
+		numpages = {10},
+		keywords = {online advertising, counterfactual inference, off-policy learning},
+		location = {Long Beach, CA, USA},
+		series = {KDD '23}
+	}
 ```
 
 
@@ -60,4 +71,3 @@ See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more inform
 ## License
 
 This project is licensed under the Apache-2.0 License.
-
