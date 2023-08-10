@@ -8,7 +8,7 @@ authors:
   given-names: "Sean"
 - family-names: "Allison"
   given-names: "Ben"
-title: "Learning to Bid with AuctionGym"
+title: "Off-Policy Learning to Bid with AuctionGym"
 url: "https://github.com/amzn/auction-gym"
 preferred-citation:
   type: conference-paper
@@ -20,6 +20,6 @@ preferred-citation:
     given-names: "Sean"
   - family-names: "Allison"
     given-names: "Ben"
-  collection-title: "Proceedings of the AdKDD Workshop at the 28th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining"
-  title: "Learning to Bid with AuctionGym"
-  year: 2022
+  collection-title: "Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery & Data Mining"
+  title: "Off-Policy Learning to Bid with AuctionGym"
+  year: 2023
