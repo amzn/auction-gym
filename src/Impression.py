@@ -14,8 +14,8 @@ class ImpressionOpportunity:
     estimated_CTR: np.float32
     price: np.float32
     second_price: np.float32
-    outcome: np.bool
-    won: np.bool
+    outcome: bool
+    won: bool
 
     def set_true_CTR(self, best_expected_value, true_CTR):
         self.best_expected_value = best_expected_value  # Best possible CTR (to compute regret from ad allocation)
