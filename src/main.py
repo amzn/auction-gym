@@ -30,9 +30,9 @@ def parse_config(path):
     np.random.seed(config['random_seed'])
 
     # Number of runs
-    num_runs = config['num_runs'] if 'num_runs' in config.keys() else 1
+    num_runs = config['num_runs'] if 'num_runs' in config else 1
 
-    # Max. number of slots in every auction round
+    # Max number of slots in every auction round
     # Multi-slot is currently not fully supported.
     max_slots = 1
 
@@ -45,8 +45,8 @@ def parse_config(path):
     agent_configs = []
     num_agents = 0
     for agent_config in config['agents']:
-        if 'num_copies' in agent_config.keys():
-            for i in range(1, agent_config['num_copies'] + 1):
+        if 'num_copies' in agent_config:
+            for _ in range(1, agent_config['num_copies'] + 1):
                 agent_config_copy = deepcopy(agent_config)
                 agent_config_copy['name'] += f' {num_agents + 1}'
                 agent_configs.append(agent_config_copy)
@@ -84,7 +84,7 @@ def instantiate_agents(rng, agent_configs, agents2item_values, agents2items):
               item_values=agents2item_values[agent_config['name']],
               allocator=eval(f"{agent_config['allocator']['type']}(rng=rng{parse_kwargs(agent_config['allocator']['kwargs'])})"),
               bidder=eval(f"{agent_config['bidder']['type']}(rng=rng{parse_kwargs(agent_config['bidder']['kwargs'])})"),
-              memory=(0 if 'memory' not in agent_config.keys() else agent_config['memory']))
+              memory=(0 if 'memory' not in agent_config else agent_config['memory']))
         for agent_config in agent_configs
     ]
 

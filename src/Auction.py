@@ -56,7 +56,7 @@ class Auction:
         CTRs = np.array(CTRs)
 
         # Now we have bids, we need to somehow allocate slots
-        # "second_prices" tell us how much lower the winner could have gone without changing the outcome
+        # "second_prices" tells us how much lower the winner could have gone without changing the outcome
         winners, prices, second_prices = self.allocation.allocate(bids, num_slots)
 
         # Bidders only obtain value when they get their outcome

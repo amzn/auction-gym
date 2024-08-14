@@ -52,6 +52,7 @@ class PyTorchWinRateEstimator(torch.nn.Module):
     def __init__(self):
         super(PyTorchWinRateEstimator, self).__init__()
         # Input  P(click), the value, and the bid shading factor
+        # TODO: What are the features?? Why in_features = 3?
         self.model = torch.nn.Sequential(
             torch.nn.Linear(3, 1, bias=True),
             torch.nn.Sigmoid()

@@ -127,4 +127,3 @@ class Agent:
         else:
             self.logs = self.logs[-self.memory:]
         self.bidder.clear_logs(memory=self.memory)
-
