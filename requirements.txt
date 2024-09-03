@@ -17,6 +17,6 @@ scipy==1.10.0
 seaborn==0.11.2
 six==1.16.0
 threadpoolctl==3.1.0
-torch==1.13.1
+torch==2.2.0
 tqdm==4.66.3
 typing_extensions==4.2.0
